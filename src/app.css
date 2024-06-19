@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+*
+{
+  padding: 0;
+  margin : 0;
+  box-sizing: border-box;
+}
+
+body
+{
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+header h5
+{
+  display: flex;
+  text-align: center;
+  opacity: 0.5;
+  font-size: 18px;
+  max-width: 800px;
+  line-height: 30px;
+  font-family: "PT Sans", sans-serif,Arial, Helvetica, sans-serif;
+}
+
+.input-group 
+{
+  max-width: 500px;
+}
+
+.js-input::placeholder
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-btn 
+{
+  background-color: #FFAC4C;
+  color: white;
+}
+
+.search-btn:hover 
+{
+  background-color: #ff8800d2;
+  color: white;
+}
+
+.recipe-header-container h2
+{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.meal-item
+{
+  padding: 30px;
+  border-radius: 5px;
+  border:1px solid black;
+}
+
+.meal-container
+{
+  border-radius: 20px;
+  box-shadow: 0 4px 21px -12px rgba(0,0,0,0.79);
+}
+
+.meal-img img 
+{
+  width: 100%;
+  height: auto;
+  border-top-left-radius:20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.meal-name,
+.recipe-btn
+{
+  text-align: center;
+}
+
+.meal-name
+{
+  padding: 30px;
+}
+
+
+.meal-name h3
+{
+  font-size: 16px;
+}
+
+.recipe-btn 
+{
+  margin-top: 10px;
+  width: 120px;
+  border:none;
+  height: 35px;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  background-color: #FFAC4C;
+  border-radius: 50px;
+}
+
+.recipe-btn:hover 
+{
+  background-color: #ff8800d2;
+}
+
+
+.recipe-header-container
+{
+  max-width: auto;
+}
+
+.recipe-container
+{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:50px;
+  padding: 50px;
+}
+
+
+.close-recipe 
+{
+  display: none;
+}
+
+.meal-details 
+{
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  border-radius: 10px;
+  background-color: #FFAC4C;
+  width: 80%;
+  height: 90%;
+  overflow-y: scroll;
+  padding: 50px;
+  z-index: 2;
+  scrollbar-width: thin;
+}
+
+
+.recipe-category 
+{
+  width: 120px;
+  padding: 12px;
+  background-color: white;
+  color: black;
+  border-radius: 2px;
+}
+
+.meal-details-container 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.close-icon
+{
+  width: 25px;
+  height: auto;
+}
+
+.recipe-close-btn 
+{
+  border-radius: 50px;
+  border:none;
+  padding: 5px;
+  background-color: white;
+}
+
+.recipe-close-btn:hover
+{
+  background-color: rgb(202, 202, 202)
+}
+
+.recipe-meal-img
+{
+  margin-bottom: 20px;
+}
+
+.recipe-link a
+{
+  text-decoration: none;
+  padding: 12px;
+  background-color: white;
+  color: black;
+  width: 120px;
+  height: 30px;
+  border:1px solid black;
+  border-radius: 10px;
+}
+
+.recipe-link a:hover 
+{
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+
+.recipe-meal-img img 
+{
+  max-width: 150px;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 30px;
+}
+
+
+
+@media screen and (max-width : 900px)
+{
+  .recipe-container
+  {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+
+@media (min-width:320px) and (max-width : 500px)
+{
+  .recipe-container
+  {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  h3 
+  {
+    margin-bottom:10px;
+  }
+
+  header h5 
+  {
+    font-size: 15px;
+  }
+
+  h2 
+  {
+    font-size: 20px;
+  }
+
+  h3 
+  {
+    font-size: 18px;
+  }
+
+  .meal-details
+  {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .close-icon
+  {
+    width: 20px;
+    height: auto;
+  }
+  
+  .recipe-close-btn 
+  {
+    border-radius: 50px;
+    border:none;
+    padding: 5px;
+    background-color: white;
+  }
+
+  .recipe-meal-img img
+  {
+    max-width: 120px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width:500px) and (max-width:768px)
+{
+  .recipe-container
+  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    padding: 20px;
+  }
+}
